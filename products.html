@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Products</title>
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+            background-color: #2196F3;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .item-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .item {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .item img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        .item-name {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Back Button -->
+<button class="back-button" onclick="goBack()">Back</button>
+
+<!-- Header -->
+<div class="header">Available Products</div>
+
+<!-- Item Containers -->
+<div class="item-container">
+    <!-- Item 1 -->
+    <div class="item">
+        <img src="item1.png" alt="Item 1" onclick="showPopup('Item 1 added to cart')">
+        <div class="item-name">Item 1</div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="item">
+        <img src="item2.png" alt="Item 2" onclick="showPopup('Item 2 added to cart')">
+        <div class="item-name">Item 2</div>
+    </div>
+
+    <!-- Add more items as needed -->
+</div>
+
+<!-- Popup Message -->
+<div id="popup" class="popup"></div>
+
+<!-- JavaScript for Back Button -->
+<script>
+    function goBack() {
+        window.location.href = '/'; // Change this to the actual path of your index.html file
+    }
+
+    function showPopup(message) {
+        var popup = document.getElementById('popup');
+        popup.innerHTML = message;
+        popup.style.display = 'block';
+        setTimeout(function () {
+            popup.style.display = 'none';
+        }, 2000); // Adjust the duration (in milliseconds) the popup is displayed
+    }
+</script>
+
+</body>
+</html>

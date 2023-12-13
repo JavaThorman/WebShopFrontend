@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+
+<!-- Added Register Logo -->
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh; position: relative;">
+    <!-- Back Button -->
+    <button style="position: absolute; top: 10px; left: 10px; padding: 10px; background-color: #2196F3; color: #fff; border: none; cursor: pointer;" onclick="goBack()">Back</button>
+    
+    <div style="position: absolute; top: 10px; font-size: 24px; font-weight: bold;">Register</div>
+    <div style="width: 300px; text-align: center;">
+        <div style="margin-bottom: 15px;">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+        </div>
+        <button style="width: 100%; padding: 10px; background-color: #2196F3; color: #fff; border: none; cursor: pointer;">REGISTER</button>
+    </div>
+</div>
+
+<!-- JavaScript for Back Button -->
+<script>
+    function goBack() {
+        window.location.href = '/'; 
+    }
+</script>
+
+</body>
+</html>
